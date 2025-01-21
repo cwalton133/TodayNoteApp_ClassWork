@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Your Notebooks</h1>
+<a href="{% url 'notebook-create' %}">Create New Notebook</a>
+<ul>
+    {% for notebook in notebooks %}
+    <li>
+        <a href="{% url 'notebook-detail' notebook.id %}">{{ notebook.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
