@@ -16,3 +16,4 @@ class NoteAdmin(admin.ModelAdmin):
 class NoteCategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
     search_fields = ('name',)
+
